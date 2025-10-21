@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wahat Al-Bashaer Restaurant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <h1>Wahat Al-Bashaer</h1>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#cartSection">Cart 🛒 (0)</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="home" class="section">
+  <p>Welcome to everyone’s favorite spot for delicious, fast, and affordable meals!</p>
+  <img src="1.png" alt="logo" class="img">
+</section>
+  
+  <section id="about" class="section about">
+ <h2>Meet Our Team</h2>
+ <div class="team">
+   <div class="team-card">
+     <img src="employee1.png" alt="Employee 1">
+     <p>Name</p>
+   </div>
+   <div class="team-card">
+     <img src="employee2.png" alt="Employee 2">
+        <p>Name</p>
+    </div>
+    <div class="team-card">
+      <img src="employee3.png" alt="Employee 3">
+      <p>Name</p>
+    </div>
+  </div>
+
+  <h2 class="wall-title">Photo Wall</h2>
+  <p>Capture the fun and share your photo!</p>
+  <input type="file" id="photoUpload" accept="image/*">
+  <div class="photo-wall" id="photoWall">
+  </div>
+</section>
+
+<section id="menu" class="section">
+  <h2>Our Menu</h2>
+  <p>Select a Category:</p>
+  <ul>
+    <li>
+      <a href="#sandwiches">
+        <img src="sandwich_category.png" alt="Sandwiches" width="150">
+        <p>Sandwiches</p>
+      </a>
+    </li>
+    <li>
+      <a href="#juices">
+        <img src="juice_category.png" alt="Juices" width="150">
+        <p>Juices</p>
+      </a>
+    </li>
+    <li>
+      <a href="#pizza">
+        <img src="pizza_category.png" alt="Pizza" width="150">
+        <p>Pizza</p>
+      </a>
+    </li>
+  </ul>
+</section>
+
+<section id="sandwiches" class="section">
+  <h3>Sandwiches</h3>
+  <ul>
+    <li>
+      <img src="chicken_sandwich.png" alt="Chicken Sandwich" width="100">
+      Chicken Sandwich - BD 1.5 
+      <button>Add to Cart</button>
+    </li>
+    <li>
+      <img src="beef_sandwich.png" alt="Beef Sandwich" width="100">
+      Beef Sandwich - BD 2.0 
+      <button>Add to Cart</button>
+    </li>
+  </ul>
+</section>
+
+<section id="juices" class="section">
+  <h3>Juices</h3>
+  <ul>
+    <li>
+      <img src="orange_juice.png" alt="Orange Juice" width="100">
+      Orange Juice - BD 1.0 
+      <button>Add to Cart</button>
+    </li>
+    <li>
+      <img src="apple_juice.png" alt="Apple Juice" width="100">
+      Apple Juice - BD 1.2 
+      <button>Add to Cart</button>
+    </li>
+  </ul>
+</section>
+
+<section id="pizza" class="section">
+  <h3>Pizza</h3>
+  <ul>
+    <li>
+      <img src="margherita_pizza.png" alt="Margherita Pizza" width="100">
+      Margherita - BD 1.8 
+      <button>Add to Cart</button>
+    </li>
+    <li>
+      <img src="pepperoni_pizza.png" alt="Pepperoni Pizza" width="100">
+      Pepperoni - BD 2.0 
+      <button>Add to Cart</button>
+    </li>
+  </ul>
+</section>
+
+<section id="cartSection" class="section">
+  <h2>Your Cart</h2>
+  <div id="cartItems">No items yet.</div>
+     
+  <form class="cart-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="text" placeholder="Your Phone Number" required>
+
+    <select id="deliveryOption" required>
+      <option value="pickup">Pick-Up</option>
+      <option value="delivery">Delivery (on campus)</option>
+    </select>
+
+
+    <input type="text" id="deliveryLocation" placeholder="Your location on campus" style="display:none;">
+
+
+    <textarea id="additionalNotes" placeholder="Any additional notes or special requests?" rows="3"></textarea>
+
+    <button type="submit">Confirm Order</button>
+  </form>
+</section>
+
+<div id="confirmModal" class="popup-box hidden">
+  <div class="popup-content">
+    <h3>Confirm Action</h3>
+    <p id="confirmText">Are you sure?</p>
+    <button id="yesBtn" class="pow-btn">Yes</button>
+    <button id="noBtn" class="pow-btn">No</button>
+  </div>
+</div>
+
+<div id="orderPopup" class="popup-box hidden">
+  <div class="popup-content">
+    <h3>Order Details</h3>
+    <ul id="popupList"></ul>
+    <button id="closePopup">Confirm</button>
+  </div>
+</div>
+
+<section id="contact" class="section">
+  <h2>Contact Us</h2>
+  <p>📞 Phone: +973 1234 5678</p>
+  <p>📍 Location: Campus A</p>
+</section>
+
+<footer>
+  <p>© 2025 Wahat Al-Bashaer</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
